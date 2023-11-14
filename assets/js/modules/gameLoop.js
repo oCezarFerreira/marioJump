@@ -10,7 +10,7 @@ export default function gameLoop (pipe, mario) {
 
       mario.style.animation = 'none'
       mario.style.bottom = `${marioPosition}px`
-      mario.src = './src/images/game-over.png'
+      mario.src = './assets/images/game-over.png'
       mario.style.width = '75px'
       mario.style.marginLeft = '50px'
       mario.style.marginBottom = '35px'
