@@ -1,5 +1,4 @@
 export default function gameLoop (pipe, mario) {
-
   setInterval(() => {
     const pipePosition = pipe.offsetLeft
     const marioPosition = Number(window.getComputedStyle(mario).bottom.replace('px', ''))
