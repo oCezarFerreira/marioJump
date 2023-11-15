@@ -1,3 +1,10 @@
+:root {
+  --color-red: #FF0000;
+  --color-green: #4cbb17;
+  --color-yellow: #FCCF00;
+  --color-blue: #009BD9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +17,73 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* ---------------------- Menu ---------------------- */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu > h1 {
+  font-family: 'Mario';
+  font-size: 72px;
+  margin-top: 12vh;
+}
+
+.menu > h1 > .m {
+  color:var(--color-red)
+}
+.menu > h1 > .a {
+  color:var(--color-green)
+}
+.menu > h1 > .r {
+  color:var(--color-yellow)
+}
+.menu > h1 > .i {
+  color:var(--color-blue)
+}
+.menu > h1 > .o {
+  color:var(--color-green)
+}
+.menu > h1 > .run {
+  color:var(--color-red)
+}
+.menu > h1 > .ner {
+  color:var(--color-green)
+}
+
+.menu > .btn-start-game {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 16px;
+  margin-top: 30px;
+  font-family: 'Mario';
+  font-size: 50px;
+  color: var(--color-green);
+  width: 210px;
+  height:83px;
+  border-radius: 30px;
+
+}
+.menu > .btn-start-game::before {
+  content: '▶';
+  margin-right: 5px;
+  color: var(--color-red);
+}
+
+.menu > .btn-start-game:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: ease 500ms;
+}
+
 
 /* ---------------------- Game Board ---------------------- */
 
@@ -39,7 +113,7 @@
 .clouds {
   position: absolute;
   z-index: 0;
-  width: 550px;
+  width: 30vw;
   animation: clouds-animation 10s linear infinite;
 }
 
@@ -105,11 +179,11 @@
   margin-bottom: 20px;
   font-size: 52px;
   text-shadow: 4px 3px black;
-  color: #FF0000;
+  color: var(--color-red);
 }
 
 .score > .best {
-  color: #4cbb17;
+  color: var(--color-green);
   font-size: 24px;
   text-shadow: 4px 3px black;
 }
